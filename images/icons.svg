@@ -130,6 +130,12 @@
 <symbol id="icon-close-burger" viewBox="0 0 32 32">
 <path d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"></path>
 </symbol>
+<symbol id="icon-vector1" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M2.395 2.394l27.429 27.429"></path>
+</symbol>
+<symbol id="icon-vector2" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M29.823 2.394l-27.429 27.429"></path>
+</symbol>
 </defs>
 </svg>
 
