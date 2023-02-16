@@ -17,16 +17,16 @@
 </head>
 
 <body>
-  
 
-<button class="tt-button" type="button">Take table</button>
 
-<div class="tt-backdrop">
-    <div class="tt-modal">
-        
+    <button class="tt-button" type="button" data-modal-open>Take table</button>
+
+
+    <div class="tt-modal is-hidden" data-modal>
+
         <button type="button" class="modal-close" data-modal-close>
             <svg class="close-modal-icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-vector1"></use>
+                <use href="./images/icons.svg#icon-close-modal"></use>
             </svg>
         </button>
 
@@ -34,45 +34,49 @@
             <p class="tt-modal-title">ЗАБРОНЮВАТИ СТОЛИК</p>
         </div>
 
-                    <form class="tt-modal-form">
-                    
-                        <div class="tt-modal-input-field">                         
-                            <div class="tt-input-wrap">
-                                <input type="text" class="tt-modal-input" name="name" id="name" required placeholder="Ваше ім’я">
-                            </div>
-                            <label for="name" class="tt-input-label-title">На кого забронювати столик?</label>
-                        </div>
-                        <div class="tt-modal-input-field">
-                            <div class="tt-input-wrap">
-                                <input type="tel" class="tt-modal-input" name="tel" id="tel" required placeholder="+38 (___) ___-__-__">
-                            </div>
-                            <label for="tel" class="tt-input-label-title">Номер телефону</label>
-                        </div>
+        <form class="tt-modal-form">
 
-                        <div class="tt-modal-input-field">
-                            <div class="tt-input-wrap">
-                                <select id="person" name="person" class="tt-modal-input">
-                                    <option value="2" class="value" selected>2</option>
-                                    <option value="3" class="value">3</option>
-                                    <option value="4" class="value">4</option>
-                                    <option value="5" class="value">5</option>
-                                </select>
-                            </div>
-                            <label for="person" class="tt-input-label-title">Столик на яку кількість осіб?</label>
-                        </div>
-                        <div class="tt-modal-input-field">
-                            <div class="tt-input-wrap">
-                                <select id="tt-date" name="tt-date" class="tt-modal-input">
-                                    <option value="today" class="value" selected>Сьогодні</option>
-                                </select>
-                            </div>
-                            <label for="tt-date" class="tt-input-label-title">На яку дату бронювати?</label>
-                        </div>
-                        <button type="submit" class="tt-modal-button">ОФОРМИТИ БРОНЮВАННЯ</button>
-                    </form>
+            <div class="tt-input-wrap">
+                <div class="tt-input-wrap-part">
+                    <div class="tt-modal-input-field">
+                        <input type="text" class="tt-modal-input" name="name" id="name" required
+                            placeholder="Ваше ім’я">
+                        <label for="name" class="tt-input-label-title">На кого забронювати столик?</label>
+                    </div>
+                    <div class="tt-modal-input-field">
+                        <input type="tel" class="tt-modal-input" name="tel" id="tel" required
+                            placeholder="+38 (___) ___-__-__">
+                        <label for="tel" class="tt-input-label-title">Номер телефону</label>
+                    </div>
+                </div>
+
+                <div class="tt-input-wrap-part">
+                    <div class="tt-modal-input-field">
+                        <select id="person" name="person" class="tt-modal-input">
+                            <option value="2" class="value" selected>2</option>
+                            <option value="3" class="value">3</option>
+                            <option value="4" class="value">4</option>
+                            <option value="5" class="value">5</option>
+                        </select>
+                        <label for="person" class="tt-input-label-title">Столик на яку кількість осіб?</label>
+                    </div>
+                    <div class="tt-modal-input-field">
+                        <select id="tt-date" name="tt-date" class="tt-modal-input">
+                            <option value="today" class="value" selected>Сьогодні</option>
+                        </select>
+                        <label for="tt-date" class="tt-input-label-title">На яку дату бронювати?</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="tt-modal-button">ОФОРМИТИ БРОНЮВАННЯ</button>
+
+
+        </form>
     </div>
-</div>
 
+    <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
 
 </body>
+
 </html>
