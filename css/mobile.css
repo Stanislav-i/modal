@@ -1,0 +1,22 @@
+@media screen and (min-width: 480px) {
+    .container {
+        width: 426px;
+    }
+
+    /* ---HERO--- */
+    .hero-title {
+        max-width: 320px;
+    }
+
+    .hero>.container {
+        width: 426px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* ---TEAM--- */
+    .team>.container {
+        width: 284px;
+    }
+
+}
