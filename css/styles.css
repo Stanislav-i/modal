@@ -16,14 +16,14 @@ select {
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: calc(100% - 20px) center;
-    
-        font-family: 'Times New Roman';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 23px;
-            letter-spacing: 0.05em;
-            color: #808080;
+
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #808080;
 }
 
 .is-hidden {
@@ -38,9 +38,7 @@ body {
 
 /* КНОПКА ДЛЯ ВІДКРИТТЯ, НЕ ВИКОРИСТОВУВАТИ */
 
-.example
-
-.tt-button {
+.example .tt-button {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -80,12 +78,12 @@ body {
 
 .backdrop {
     position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(46, 47, 66, 0.4);
-        transition: opacity 300ms linear, visibility 300ms linear;
-    }
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 300ms linear, visibility 300ms linear;
+}
 
 
 
@@ -108,7 +106,7 @@ body {
     right: 16px;
     background: transparent;
     border: transparent;
-
+    padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -117,6 +115,7 @@ body {
 
 .close-modal-icon {
     fill: #000000;
+    stroke: #000000;
 }
 
 .tt-modal-title {
@@ -182,7 +181,7 @@ body {
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #808080;
- 
+
 }
 
 
@@ -211,28 +210,28 @@ body {
 
 .tp-modal-title {
     font-family: 'Times New Roman';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 1.17;
-        letter-spacing: 0.05em;
-        color: #808080;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #808080;
 }
 
 .tp-modal-price {
     font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 0.8;
-        letter-spacing: 0.02em;  
-        color: #C79002;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0.8;
+    letter-spacing: 0.02em;
+    color: #C79002;
 }
 
 @media screen and (min-width: 414px) {
     .tt-modal {
-            width: 414px;
-        }
+        width: 414px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -241,7 +240,7 @@ body {
         padding: 60px 60px;
     }
 
-        .tt-modal-button {
+    .tt-modal-button {
         padding: 18px;
         line-height: 0.82;
     }
@@ -262,8 +261,7 @@ body {
     }
 
     /* ----- ROOM------ */
-    .tr-input-wrap {    
-    }
+    .tr-input-wrap {}
 
     .tr-input-wrap-one {
         display: flex;
