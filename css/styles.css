@@ -32,6 +32,10 @@ select {
     pointer-events: none;
 }
 
+/* КНОПКА ДЛЯ ВІДКРИТТЯ, НЕ ВИКОРИСТОВУВАТИ */
+
+.example
+
 .tt-button {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
@@ -89,8 +93,6 @@ select {
     position: absolute;
     top: 16px;
     right: 16px;
-    width: 24px;
-    height: 24px;
     background: transparent;
     border: transparent;
 
@@ -167,6 +169,7 @@ select {
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #808080;
+ 
 }
 
 
@@ -183,6 +186,7 @@ select {
     background-color: #000000;
     border: 1px solid #F3C653;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 414px) {
