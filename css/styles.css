@@ -32,6 +32,10 @@ select {
     pointer-events: none;
 }
 
+body {
+    background-color: aqua;
+}
+
 /* КНОПКА ДЛЯ ВІДКРИТТЯ, НЕ ВИКОРИСТОВУВАТИ */
 
 .example
@@ -73,6 +77,15 @@ select {
 }
 
 /* --------MODAL----------*/
+
+.backdrop {
+    position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 47, 66, 0.4);
+        transition: opacity 300ms linear, visibility 300ms linear;
+    }
 
 
 
@@ -189,6 +202,33 @@ select {
     cursor: pointer;
 }
 
+/* PRICE */
+
+.tp-modal-title-wrap {
+    padding-top: 20px;
+    padding-bottom: 28px;
+}
+
+.tp-modal-title {
+    font-family: 'Times New Roman';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.05em;
+        color: #808080;
+}
+
+.tp-modal-price {
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 0.8;
+        letter-spacing: 0.02em;  
+        color: #C79002;
+}
+
 @media screen and (min-width: 414px) {
     .tt-modal {
             width: 414px;
@@ -218,6 +258,39 @@ select {
     }
 
     .tt-input-wrap-part {
+        width: calc((100% - 16px) / 2);
+    }
+
+    /* ----- ROOM------ */
+    .tr-input-wrap {    
+    }
+
+    .tr-input-wrap-one {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tr-modal-input-field {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .tr-input-wrap-two {
+        display: flex;
+        justify-content: end;
+
+    }
+
+    .tr-input-wrap-three {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tp-input-wrap {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tp-modal-input-field {
         width: calc((100% - 16px) / 2);
     }
 }
