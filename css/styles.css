@@ -8,6 +8,8 @@ h6 {
     margin: 0;
 }
 
+/* select та is-hidden обов'язково додати до root */
+
 select {
     appearance: none;
     -moz-appearance: none;
@@ -32,11 +34,27 @@ select {
     pointer-events: none;
 }
 
-body {
+/* body {
     background-color: aqua;
-}
+} */
 
-/* КНОПКА ДЛЯ ВІДКРИТТЯ, НЕ ВИКОРИСТОВУВАТИ */
+/*
+
+На сторінках з кнопками відкриття модалок, додайте до кнопки відповідний JS селектор:
+ data-modal-open для ЗАБРОНЮВАТИ СТОЛИК
+data-room-open для Забронювати номер
+data-price-open для Переглянути ціни
+Виглядає приблизно так - 
+<button 
+class="ВАШ КЛАСС" 
+type="button" 
+data-modal-open>
+ЗАБРОНЮВАТИ СТОЛИК
+</button>
+*/
+
+/* КНОПКА tt-button ДЛЯ ВІДКРИТТЯ ДЛЯ ПРИКЛАДУ,
+НЕ ВИКОРИСТОВУВАТИ */
 
 .example .tt-button {
     font-family: "Roboto", sans-serif;
@@ -74,7 +92,7 @@ body {
     background-color: #404BBF;
 }
 
-/* --------MODAL----------*/
+/* --------TABLE----------*/
 
 .backdrop {
     position: fixed;
@@ -85,15 +103,12 @@ body {
     transition: opacity 300ms linear, visibility 300ms linear;
 }
 
-
-
 .tt-modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scaleY(1);
     width: 100%;
-
     background: #FFFDEE;
     border-radius: 2px;
     transition: transform 300ms linear;
@@ -114,7 +129,7 @@ body {
 }
 
 .close-modal-icon {
-    fill: #000000;
+    /* fill: #000000; */
     stroke: #000000;
 }
 
@@ -146,7 +161,6 @@ body {
     padding-bottom: 17px;
     padding-left: 12px;
     outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     margin-bottom: 8px;
     margin-top: 20px;
 }
@@ -169,7 +183,6 @@ body {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.05em;
-
     color: #808080;
 }
 
@@ -181,9 +194,7 @@ body {
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #808080;
-
 }
-
 
 .tt-modal-button {
     width: 100%;
@@ -199,6 +210,14 @@ body {
     border: 1px solid #F3C653;
     border-radius: 2px;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.tt-modal-button:hover,
+.tt-modal-button:focus {
+    background-color: #F3C653;
+    color: #000000;
 }
 
 /* PRICE */
@@ -261,7 +280,6 @@ body {
     }
 
     /* ----- ROOM------ */
-    .tr-input-wrap {}
 
     .tr-input-wrap-one {
         display: flex;
@@ -275,7 +293,6 @@ body {
     .tr-input-wrap-two {
         display: flex;
         justify-content: end;
-
     }
 
     .tr-input-wrap-three {
