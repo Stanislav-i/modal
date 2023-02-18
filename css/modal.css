@@ -1,0 +1,311 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+/* select та is-hidden обов'язково додати до root */
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 20px) center;
+
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* body {
+    background-color: aqua;
+} */
+
+/*
+
+На сторінках з кнопками відкриття модалок, додайте до кнопки відповідний JS селектор:
+ data-modal-open для ЗАБРОНЮВАТИ СТОЛИК
+data-room-open для Забронювати номер
+data-price-open для Переглянути ціни
+Виглядає приблизно так - 
+<button 
+class="ВАШ КЛАСС" 
+type="button" 
+data-modal-open>
+ЗАБРОНЮВАТИ СТОЛИК
+</button>
+*/
+
+/* КНОПКА tt-button ДЛЯ ВІДКРИТТЯ ДЛЯ ПРИКЛАДУ,
+НЕ ВИКОРИСТОВУВАТИ */
+
+.example .tt-button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.19;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: yellow;
+    cursor: pointer;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px 32px;
+
+    background-color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.tt-button:hover,
+.tt-button:focus {
+    background-color: red;
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.tt-button:active {
+    background-color: #404BBF;
+}
+
+/* --------TABLE----------*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.tt-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
+    width: 100%;
+    background: #FFFDEE;
+    border-radius: 2px;
+    transition: transform 300ms linear;
+    padding: 60px 15px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal-icon {
+    /* fill: #000000; */
+    stroke: #000000;
+}
+
+.tt-modal-title {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 0.86;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.tt-modal-title-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tt-modal-input {
+    width: 100%;
+    height: 54px;
+    background-color: transparent;
+    border: 1px solid #C79002;
+    border-radius: 2px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 12px;
+    outline: transparent;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.tt-input-label-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 0.82;
+    letter-spacing: 0.02em;
+    color: #C79002;
+    padding-left: 12px;
+}
+
+.tt-modal-input::placeholder {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.value {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.tt-modal-button {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 0.83;
+    color: #FFFFFF;
+    background-color: #000000;
+    border: 1px solid #F3C653;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.tt-modal-button:hover,
+.tt-modal-button:focus {
+    background-color: #F3C653;
+    color: #000000;
+}
+
+/* PRICE */
+
+.tp-modal-title-wrap {
+    padding-top: 20px;
+    padding-bottom: 28px;
+}
+
+.tp-modal-title {
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.tp-modal-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0.8;
+    letter-spacing: 0.02em;
+    color: #C79002;
+}
+
+@media screen and (min-width: 414px) {
+    .tt-modal {
+        width: 414px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tt-modal {
+        width: 712px;
+        padding: 60px 60px;
+    }
+
+    .tt-modal-button {
+        padding: 18px;
+        line-height: 0.82;
+    }
+
+    .tt-modal-title {
+        font-size: 40px;
+        line-height: 0.87;
+        letter-spacing: 0.05em;
+    }
+
+    .tt-input-wrap {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tt-input-wrap-part {
+        width: calc((100% - 16px) / 2);
+    }
+
+    /* ----- ROOM------ */
+
+    .tr-input-wrap-one {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tr-modal-input-field {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .tr-input-wrap-two {
+        display: flex;
+        justify-content: end;
+    }
+
+    .tr-input-wrap-three {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tp-input-wrap {
+        display: flex;
+        gap: 16px;
+    }
+
+    .tp-modal-input-field {
+        width: calc((100% - 16px) / 2);
+    }
+}
